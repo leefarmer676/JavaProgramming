@@ -1,4 +1,4 @@
-package Day39_Recap;
+package Day39_Recap.shapeTask;
 
 public class Shape {
 
@@ -29,5 +29,14 @@ public class Shape {
     }
     public double perimeter(){
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Shape{" +
+                "name='" + name + '\'' +
+                ", area='" + area() + '\'' +
+                ", perimeter='" + perimeter() + '\'' +
+                '}';
     }
 }
