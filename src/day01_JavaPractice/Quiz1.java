@@ -1,28 +1,19 @@
 package day01_JavaPractice;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Quiz1 {
-    public static void main(String[] args) {
-
-
-     String [] cities = {"Boston", "Houston", "Austin", "Lincoln", "Tulsa"};
-        ArrayList<String> list = new ArrayList<>(Arrays.asList(cities));
-        int a = list.size();
-
-        for(String str: list){
-            String rev = "";
-
-            for(int i = str.length()-1; i>=0; i--){
-                rev += str.charAt(i);
-            }
-            list.set(--a, rev);
-        }
-        System.out.println(list);
-
+public class Quiz1{
+    public static int minNum(int [] nums){
+        Arrays.sort(nums);
+        return nums[0];
     }
+
+    public static void main(String[] args) {
+        int [] arr = {4,1,0,8,-9,3,4};
+        int min = minNum(arr);
+    }
+
 }
+
 
 

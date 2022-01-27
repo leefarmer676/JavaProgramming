@@ -1,6 +1,6 @@
 package Day37_Inheritance.phoneTask;
 
-public class Samsung extends Phone{
+public final class Samsung extends Phone{
 
 
 

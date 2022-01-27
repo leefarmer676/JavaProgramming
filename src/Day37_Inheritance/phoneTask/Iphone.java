@@ -1,8 +1,8 @@
 package Day37_Inheritance.phoneTask;
 
-public class Iphone extends Phone{
+public final class Iphone extends Phone{
 
-    public void faceTime(long phoneNumber){
+    public final void faceTime(long phoneNumber){//can overload any methods, incl. final - gray bc unneccessary since class is already final
         System.out.println(brand + " " + model + " is FaceTiming with phone number: " + phoneNumber);
     }
     public void faceTime(String email){
