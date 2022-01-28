@@ -6,11 +6,7 @@ public class MorningWorkOut {
 
         for (int i = 1; i <= 30; i++) {
             System.out.print("\rPush up " + i);
-            try {
-                Thread.sleep(1500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            sleep(1.5);
         }
 
         System.out.println("Pushups complete");
