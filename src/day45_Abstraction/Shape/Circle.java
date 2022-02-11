@@ -32,5 +32,11 @@ public class Circle extends Shape{
         return 2 * radius * pi;
     }
 
-
+    @Override
+    public String toString() {
+        return "Circle{" +
+                super.toString()+ //this adds the toString from parent class instead of having to copy and paste
+                "radius=" + radius +
+                '}';
+    }
 }
