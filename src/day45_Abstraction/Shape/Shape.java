@@ -8,8 +8,8 @@ public abstract class Shape {
         return name;
     }
 
-    public Shape() {
-        this.name = getClass().getSimpleName();
+    public Shape(String name) {
+        this.name = name;
     }
     public abstract double area();
 
