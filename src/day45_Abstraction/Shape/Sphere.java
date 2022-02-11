@@ -1,7 +1,11 @@
 package day45_Abstraction.Shape;
 
-public class Cylinder extends Shape implements Volume {
+public class Sphere extends Shape implements Volume{
 
+
+    public Sphere(String name) {
+        super(name);
+    }
 
     @Override
     public double area() {
@@ -11,10 +15,6 @@ public class Cylinder extends Shape implements Volume {
     @Override
     public double perimeter() {
         return 0;
-    }
-
-    public Cylinder(String name) {
-        super(name);
     }
 
     @Override
