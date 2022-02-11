@@ -30,7 +30,22 @@ public interface PropertiesOfInterface {
     public abstract void method3();
 
 
-    public default void drink() {       //default method allows you to create method with implementation/body
-        System.out.println("Default method");
+
+
+    public default void method4() {       //default method allows you to create method with implementation/body
+        System.out.println("Default method"); //this will be instance method so must be called thru object;
+        // doesn't exist wihtout a child class bc no objcts in interface
+    }
+}
+
+class Test implements PropertiesOfInterface{
+
+    @Override
+    public void method3() {
+
+    }
+
+    public static void main(String[] args) {
+        new Test().method4();
     }
 }
