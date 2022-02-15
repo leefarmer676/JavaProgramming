@@ -24,7 +24,7 @@ public abstract class Person {
     public abstract void sleep();
 
     public void eat(){
-        System.out.println(name+ " is eating baklava");
+        System.out.println(name+" is eating baklava");
     }
 
     public String getName() {
