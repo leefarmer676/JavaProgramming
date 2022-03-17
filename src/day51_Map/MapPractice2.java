@@ -20,13 +20,51 @@ public class MapPractice2 {
 
         String name1 = "";
         int maxSalary = Integer.MIN_VALUE;
+
+        String name2 = "";
+        int minSalary = Integer.MAX_VALUE;
+
         for (Map.Entry<String, Integer> eachEntry : map.entrySet()) {
             if(eachEntry.getValue()>maxSalary){
                 maxSalary = eachEntry.getValue();
-                name1 = eachEntry.getKey();
+                name1 = eachEntry.getKey(); //String eachKey = eachEntry.getKey(); so  you can re-use the variable
+            }
+
+            if(eachEntry.getValue()<minSalary){
+                minSalary = eachEntry.getValue();
+                name2 = eachEntry.getKey();
             }
         }
         System.out.println(name1);
+
+        //1.3 how many employees has the salary between 120k ~ 150K?
+        int count = 0;
+
+        for (Integer eachValue : map.values()) {
+            if(eachValue>=120000 && eachValue<=150000){
+                count++;
+            }
+        }
+        System.out.println(count);
+
+        //1.4 display the names of the employees who are making less than 118k?
+        for (Map.Entry<String, Integer> pairs : map.entrySet()) {
+            if(pairs.getValue()<118000){
+                System.out.println(pairs.getKey());
+            }
+        }
+
+        //Increase the salary employee by 10k if the current slaary of employee is less than 120k
+        System.out.println("----------------------");
+        for (Map.Entry<String, Integer> eachPair : map.entrySet()) {
+            int eachSalary = eachPair.getValue();
+            if(eachSalary<120000){
+                eachPair.setValue(eachSalary+10000);
+            }
+        }
+        System.out.println(map);
+
+
 
         /*Map<String, Integer> map = new LinkedHashMap<>();
         map.put("John", 123000);
