@@ -99,7 +99,7 @@ public class BuiltInFunctionalInterface1 {
         System.out.println(Arrays.toString(array2));
 
         System.out.println("--------------------------");
-
+//***************TODO*************
         //create a function that can return the max number from int array
         //create a function that can swap the first and last elements of an array
         //create a function that can reverse and array and returns it
