@@ -23,6 +23,18 @@ public class FrequencyOfCharacters {
         }
         System.out.println(result);
 
+        String highestFreq = "";
+        int freq = Integer.MIN_VALUE;
+        for (Map.Entry<String, Integer> eachEntry : result.entrySet()) {
+            if(eachEntry.getValue()>freq){
+                freq=eachEntry.getValue();
+                highestFreq = eachEntry.getKey();
+            }
+
+        }
+        System.out.println(freq);
+        System.out.println(highestFreq);
+
 
         //write a program that can return teh frequency of characters
         //Must use Map
